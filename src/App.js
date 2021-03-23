@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     alanBtn({
-      key: '64370f4c903e66c5b517887fefa45c1b2e956eca572e1d8b807a3e2338fdd0dc/stage',
+      key: '7b6566ba40cb0c9b30abeed7189b7f9d2e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: ({ command, articles, number }) => {
         if (command === 'newHeadlines') {
           setNewsArticles(articles);
@@ -37,6 +37,18 @@ const App = () => {
           } else {
             alanBtn().playText('Please try that again...');
           }
+        }
+        else if (command === 'scrolldown') {
+          window.scrollTo(0, window.pageYOffset+200)
+          console.log(window.pageYOffset+200)
+
+          
+        } 
+        else if (command == 'scrollup'){
+          console.log(window.pageYOffset-200)
+          window.scrollTo(0, window.pageYOffset-200)
+
+
         }
       },
     });

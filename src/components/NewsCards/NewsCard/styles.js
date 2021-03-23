@@ -8,7 +8,7 @@ export default makeStyles({
     border: 'solid',
   },
   fullHeightCard: {
-    height: '100%',
+    height: '60%',
   },
   card: {
     display: 'flex',
@@ -18,6 +18,9 @@ export default makeStyles({
   },
   activeCard: {
     borderBottom: '10px solid #22289a',
+    borderTop: '2px solid #4527A0',
+    borderLeft:  '2px solid #4527A0',
+    borderRight:'2px solid #4527A0'
   },
   grid: {
     display: 'flex',
