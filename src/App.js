@@ -39,14 +39,14 @@ const App = () => {
           }
         }
         else if (command === 'scrolldown') {
-          window.scrollTo(0, window.pageYOffset+200)
+          window.scrollTo(0, window.pageYOffset+250)
           console.log(window.pageYOffset+200)
 
           
         } 
         else if (command == 'scrollup'){
-          console.log(window.pageYOffset-200)
-          window.scrollTo(0, window.pageYOffset-200)
+          console.log(window.pageYOffset-250)
+          window.scrollTo(0, window.pageYOffset-250)
 
 
         }
@@ -63,20 +63,10 @@ const App = () => {
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-        <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
-      {!newsArticles.length ? (
-        <div className={classes.footer}>
-          <Typography variant="body1" component="h2">
-            Created by
-            <a className={classes.link} href="https://www.linkedin.com/in/adrian-hajdin/"> Adrian Hajdin</a> -
-            <a className={classes.link} href="http://youtube.com/javascriptmastery"> JavaScript Mastery</a>
-          </Typography>
-          <img className={classes.image} src={logo} height="50px" alt="JSMastery logo" />
-        </div>
-      ) : null}
+      
     </div>
   );
 };
