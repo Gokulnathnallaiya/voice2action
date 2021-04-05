@@ -18,6 +18,7 @@ const NewsCards = ({ articles, activeArticle }) => {
     return (
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={3}>
+          <p>NEWS APP</p>
           {infoCards.map((infoCard) => (
             <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard}>
               <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
